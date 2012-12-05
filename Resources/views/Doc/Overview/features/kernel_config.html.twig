@@ -1,0 +1,88 @@
+<section class="feature">
+    <h3 id="kernel">Kernel configuration file</h3>
+
+    <p>
+        In RAD edition, there's not custom project kernel class. Mainly because you ain't gonna
+        need it. In your front controllers (including <code>console</code>) you'll just initialize
+        RadAppKernel:
+    </p>
+
+    <pre><code>&lt;?php
+use Symfony\Component\HttpFoundation\Request;
+use Knp\Bundle\RadBundle\HttpKernel\RadKernel;
+
+$loader =require(__DIR__.'/../vendor/.composer/autoload.php');
+$kernel = RadKernel::createAppKernel($loader, 'prod', false);
+$kernel-&gt;loadClassCache();
+$kernel-&gt;handle(Request::createFromGlobals())-&gt;send();</code></pre>
+
+    <p>
+        <code>config/kernel.yml</code> is the main configuration file for your application.
+        It defines all the bundles that your project requires, environment-dependant
+        parameters and a project namespace.
+    </p>
+
+    <pre><code># config/kernel.yml
+project: KnpRad
+all:
+    bundles:
+        - Symfony\Bundle\FrameworkBundle\FrameworkBundle
+        - Symfony\Bundle\SecurityBundle\SecurityBundle
+        - Symfony\Bundle\TwigBundle\TwigBundle
+        - Symfony\Bundle\MonologBundle\MonologBundle
+        - Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle
+        - Symfony\Bundle\AsseticBundle\AsseticBundle
+        - Symfony\Bundle\DoctrineBundle\DoctrineBundle
+        - Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle
+
+    parameters:
+        locale:  en
+        secret:  ThisTokenIsNotSoSecretChangeIt
+        ...
+dev:
+    bundles:
+        - Symfony\Bundle\WebProfilerBundle\WebProfilerBundle
+test:
+    bundles:
+        - Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</code></pre>
+
+    <p>
+        As with <a href="#config">any other config in the RAD edition</a>, this file is split by
+        environment and has 3 main configuration options:
+    </p>
+
+    <ol>
+        <li>
+            <code>project</code> defines your project name (namespace). This could be
+            either a simple project name (<code>KnpRad</code>) or fully qualified namespace
+            (<code>Knp\Rad</code>). This option tells RadKernel where to find your
+            <a href="#app-bundle">application bundle</a>. In the case of <code>KnpRad</code>,
+            your application code should live inside the <code>src/KnpRad</code> folder and
+            have the <code>KnpRad\</code> namespace. In the case of <code>Knp\Rad</code>, the folder
+            would be <code>src/Knp/Rad</code> and the namespace would be <code>Knp\Rad\</code>.
+        </li>
+        <li>
+            <code>parameters</code> defines environment-sensible project parameters, like
+            database connection or mailer configuration. It's like the good old <code>parameters.ini</code>.
+        </li>
+        <li>
+            <code>bundles</code> defines what bundle classes RadKernel should activate
+            for each environment. Every environment could have own set of bundles, but
+            all environment will have a common set of bundles, defined in the <code>all</code>
+            environment section.
+        </li>
+    </ol>
+    <p>
+        After loading <code>config/kernel.yml</code>, RadKernel will look for a <code>config/kernel.custom.yml</code>
+        file. You can use this file to redefine any parameters that are specific
+        to your machine. This is quite literally the equivalent of <code>parameters.ini</code>
+        and the file should be ignored in your version control system.
+        <code>config/kernel.yml</code>:
+        <pre><code># config/kernel.custom.yml
+all:
+    parameters:
+        locale: ru</code></pre>
+    </p>
+
+
+</section>

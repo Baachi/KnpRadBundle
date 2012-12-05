@@ -1,0 +1,71 @@
+#features {
+  border-top: 10px solid #e7e4d6;
+  -moz-box-shadow: 0px 0px 15px 0px black;
+  -webkit-box-shadow: 0px 0px 15px 0px black;
+  box-shadow: 0px 0px 15px 0px black;
+  background: #faf7e9;
+  color: #625D50; }
+  #features section {
+    width: 600px;
+    margin: 50px auto;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: 0px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-left: 2px solid #e7e4d6;
+    border-right: 2px solid #e7e4d6;
+    background: #fff;
+    padding-bottom: 35px; }
+    #features section h3 {
+      padding-top: 30px;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      color: #c73715;
+      font-size: 30px;
+      font-family: 'MetaMediumRegular',sans-serif; }
+    #features section h4 {
+      padding-top: 15px;
+      padding-bottom: 20px;
+      color: #000;
+      font-size: 20px;
+      font-family: 'MetaMediumRegular',sans-serif; }
+    #features section * {
+      font-size: 14px;
+      line-height: 20px; }
+    #features section p {
+      margin-bottom: 20px; }
+    #features section p code, #features section li code {
+      padding: 1px;
+      background: #f4f2e3;
+      color: #625D50;
+      border: 0px; }
+    #features section ol li, #features section ul li {
+      margin-bottom: 15px; }
+    #features section pre {
+      padding: 0px;
+      background: #FDF6E3;
+      border-radius: 0px;
+      -webkit-border-radius: 0px;
+      -moz-border-radius: 0px;
+      margin-bottom: 20px; }
+      #features section pre code {
+        padding: 5px 10px !important;
+        border: 0px; }
+    #features section a {
+      color: #000;
+      text-decoration: underline; }
+    #features section .float-left {
+      float: left;
+      margin-right: 15px;
+      margin-bottom: 15px;
+      padding-right: 15px;
+      border-right: 1px solid #ccc; }
+    #features section .float-right {
+      float: right;
+      margin-left: 15px;
+      margin-bottom: 15px;
+      padding-left: 15px;
+      border-left: 1px solid #ccc; }
+    #features section .clear {
+      clear: both; }

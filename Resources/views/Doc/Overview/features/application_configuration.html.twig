@@ -1,0 +1,35 @@
+<section class="feature">
+    <h3 id="app-configs">Application configuration</h3>
+
+    <div class="fs-container float-left">
+        <ul class="fs-tree">
+            <li class="dir">
+                src/KnpRad/config
+                <ul>
+                    <li class="file yml">routing.yml</li>
+                    <li class="file yml">services.yml</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <p>
+        The Application <code>config</code> folder holds all your application configuration,
+        including routing and service/DIC configuration. And these files will be autoloaded!
+    </p>
+
+    <div class="clear"></div>
+
+    <p>
+        Yup, no need to include <code>routing.yml</code> inside
+        <code>config/routing/all.yml</code> or create an extension class just to load
+        <code>services.yml</code> - this will be done for you, automatically, whenever you
+        create files named <code>services.yml</code> or <code>routing.yml</code> inside
+        the application <code>config</code> folder.
+    </p>
+
+    <ul>
+        <li><code>config/routing.yml</code> - defines bundle routes. Will be autoloaded by <em>RadKernel</em> for you.</li>
+        <li><code>config/services.yml</code> - defines bundle services. Will be autoloaded by <em>RadKernel</em> for you.</li>
+    </ul>
+</section>

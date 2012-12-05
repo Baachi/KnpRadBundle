@@ -1,0 +1,98 @@
+.fs-container {
+  margin: 0px auto; }
+  .fs-container ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    color: #000; }
+    .fs-container ul.fs-tree {
+      position: relative; }
+    .fs-container ul li {
+      padding-left: 22px;
+      margin-bottom: 3px !important;
+      font-size: 13px !important; }
+    .fs-container ul ul {
+      padding-top: 4px; }
+    .fs-container ul li.dir {
+      background: url(../img/dir.png) no-repeat left 0px; }
+    .fs-container ul li.file {
+      background: url(../img/file.png) no-repeat left 0px; }
+
+#overview {
+  width: 990px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin: 0px auto; }
+  #overview .fs-tree {
+    margin-left: 350px; }
+  #overview .overview {
+    display: block;
+    position: absolute;
+    text-indent: -9999px;
+    overflow: hidden;
+    opacity: 0.2;
+    background: url(../img/overview.png) no-repeat; }
+    #overview .overview:hover {
+      opacity: 0.6; }
+    #overview .overview.config {
+      width: 156px;
+      height: 130px;
+      background-position: -165px -18px;
+      left: -158px;
+      top: -5px; }
+    #overview .overview.kernel {
+      width: 280px;
+      height: 54px;
+      background-position: -440px -10px;
+      left: 115px;
+      top: -10px; }
+    #overview .overview.bundles {
+      width: 264px;
+      height: 120px;
+      background-position: -480px -84px;
+      left: 155px;
+      top: 68px; }
+    #overview .overview.app-bundle {
+      width: 364px;
+      height: 170px;
+      background-position: -65px -715px;
+      left: -260px;
+      top: 145px;
+      z-index: 3; }
+    #overview .overview.base-controller {
+      width: 295px;
+      height: 55px;
+      background-position: -470px -205px;
+      left: 185px;
+      top: 192px; }
+    #overview .overview.resources {
+      width: 266px;
+      height: 244px;
+      background-position: -108px -274px;
+      left: -220px;
+      top: 255px;
+      z-index: 2; }
+    #overview .overview.pipeline {
+      width: 328px;
+      height: 95px;
+      background-position: -456px -302px;
+      left: 125px;
+      top: 290px; }
+    #overview .overview.app-configs {
+      width: 380px;
+      height: 65px;
+      background-position: -502px -437px;
+      left: 175px;
+      top: 418px; }
+    #overview .overview.views {
+      width: 310px;
+      height: 116px;
+      background-position: -530px -534px;
+      left: 205px;
+      top: 515px; }
+    #overview .overview.structure {
+      width: 184px;
+      height: 74px;
+      background-position: -140px -590px;
+      left: -185px;
+      top: 572px; }
